@@ -18,7 +18,7 @@ namespace me.cqp.luohuaming.EmojiMix.Code.OrderFunctions
         public bool Judge(string destStr)
         {
             var b = destStr.Replace("#", "").Replace("＃", "").Replace(" ", "").Split('+');
-            return b.Length == 2 &&
+            return MainSave.EmojiData != null && b.Length == 2 &&
                 ((b[0].IsEmojiCQCode() || b[0].Length == 2) && (b[1].IsEmojiCQCode() || b[1].Length == 2)) &&
                 (destStr.StartsWith("#") || destStr.StartsWith("＃"));
         }
