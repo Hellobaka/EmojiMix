@@ -81,15 +81,18 @@ namespace me.cqp.luohuaming.EmojiMix.Code.OrderFunctions
                     emojiLeft = emojiA;
                     emojiRight = emojiA;
                 }
+                string filename = $"u{emojiA}_u{emojiB}.png";
 
-                string url = $"{baseURL}/{date}/u{emojiLeft}/u{emojiLeft}_u{emojiRight}.png";
-                using (HttpWebClient client = new HttpWebClient())
+                if (!File.Exists(Path.Combine(MainSave.ImageDirectory, "EmojiMix", filename)))
                 {
-                    string filename = $"u{emojiA}_u{emojiB}.png";
-                    Directory.CreateDirectory(Path.Combine(MainSave.ImageDirectory, "EmojiMix"));
-                    client.DownloadFile(url, Path.Combine(MainSave.ImageDirectory, "EmojiMix", filename));
-                    sendText.MsgToSend.Add(CQApi.CQCode_Image(Path.Combine("EmojiMix", filename)).ToString());
+                    string url = $"{baseURL}/{date}/u{emojiLeft}/u{emojiLeft}_u{emojiRight}.png";
+                    using (HttpWebClient client = new HttpWebClient())
+                    {
+                        Directory.CreateDirectory(Path.Combine(MainSave.ImageDirectory, "EmojiMix"));
+                        client.DownloadFile(url, Path.Combine(MainSave.ImageDirectory, "EmojiMix", filename));
+                    }
                 }
+                sendText.MsgToSend.Add(CQApi.CQCode_Image(Path.Combine("EmojiMix", filename)).ToString());
             }
             result.SendObject.Add(sendText);
             return result;
