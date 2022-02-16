@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using me.cqp.luohuaming.EmojiMix.Code.OrderFunctions;
 using me.cqp.luohuaming.EmojiMix.Sdk.Cqp.EventArgs;
 using me.cqp.luohuaming.EmojiMix.Sdk.Cqp.Interface;
-using PublicInfos;
+using me.cqp.luohuaming.EmojiMix.PublicInfos;
 using System.Reflection;
 using Newtonsoft.Json.Linq;
 using System.IO;

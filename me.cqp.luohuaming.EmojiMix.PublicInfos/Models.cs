@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Text;
 using me.cqp.luohuaming.EmojiMix.Sdk.Cqp.EventArgs;
 
-namespace PublicInfos
+namespace me.cqp.luohuaming.EmojiMix.PublicInfos
 {
     public interface IOrderModel
     {

@@ -5,7 +5,7 @@ using me.cqp.luohuaming.EmojiMix.Sdk.Cqp.EventArgs;
 using me.cqp.luohuaming.EmojiMix.Sdk.Cqp.Model;
 using me.cqp.luohuaming.EmojiMix.Tool.Http;
 using Newtonsoft.Json.Linq;
-using PublicInfos;
+using me.cqp.luohuaming.EmojiMix.PublicInfos;
 
 namespace me.cqp.luohuaming.EmojiMix.Code.OrderFunctions
 {

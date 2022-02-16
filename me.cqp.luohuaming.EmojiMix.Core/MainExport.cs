@@ -4,7 +4,7 @@ using System.Threading;
 using me.cqp.luohuaming.EmojiMix.Code;
 using me.cqp.luohuaming.EmojiMix.Sdk.Cqp.EventArgs;
 using me.cqp.luohuaming.EmojiMix.Sdk.Cqp.Interface;
-using PublicInfos;
+using me.cqp.luohuaming.EmojiMix.PublicInfos;
 
 namespace me.cqp.luohuaming.EmojiMix.Core
 {

@@ -7,8 +7,8 @@
     <ProjectGuid>{9CA41650-71F2-4F0C-9A80-9CDB5A7D593C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PublicInfos</RootNamespace>
-    <AssemblyName>PublicInfos</AssemblyName>
+    <RootNamespace>me.cqp.luohuaming.EmojiMix.PublicInfos</RootNamespace>
+    <AssemblyName>me.cqp.luohuaming.EmojiMix.PublicInfos</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

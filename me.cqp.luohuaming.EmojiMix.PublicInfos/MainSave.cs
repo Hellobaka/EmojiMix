@@ -4,7 +4,7 @@ using me.cqp.luohuaming.EmojiMix.Sdk.Cqp;
 using me.cqp.luohuaming.EmojiMix.Tool.IniConfig;
 using Newtonsoft.Json.Linq;
 
-namespace PublicInfos
+namespace me.cqp.luohuaming.EmojiMix.PublicInfos
 {
     public static class MainSave
     {

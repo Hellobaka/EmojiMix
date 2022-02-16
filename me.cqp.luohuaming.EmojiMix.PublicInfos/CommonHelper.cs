@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using me.cqp.luohuaming.EmojiMix.Sdk.Cqp.Model;
 using me.cqp.luohuaming.EmojiMix.Tool.IniConfig;
 
-namespace PublicInfos
+namespace me.cqp.luohuaming.EmojiMix.PublicInfos
 {
     public static class CommonHelper
     {
