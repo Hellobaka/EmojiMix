@@ -14,7 +14,7 @@ namespace me.cqp.luohuaming.EmojiMix.Code.OrderFunctions
         
         public string GetOrderStr() => "这里输入触发指令";
 
-        public bool Judge(string destStr) => destStr.Replace("＃", "#").StartsWith(GetOrderStr());//这里判断是否能触发指令
+        public bool Judge(string destStr, long FromGroup) => destStr.Replace("＃", "#").StartsWith(GetOrderStr());//这里判断是否能触发指令
 
         public FunctionResult Progress(CQGroupMessageEventArgs e)//群聊处理
         {

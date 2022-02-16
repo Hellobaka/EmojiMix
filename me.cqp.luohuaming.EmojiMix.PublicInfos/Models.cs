@@ -8,7 +8,7 @@ namespace me.cqp.luohuaming.EmojiMix.PublicInfos
     {
         bool ImplementFlag { get; set; }
         string GetOrderStr();
-        bool Judge(string destStr);
+        bool Judge(string destStr, long fromGroup);
         FunctionResult Progress(CQGroupMessageEventArgs e);
         FunctionResult Progress(CQPrivateMessageEventArgs e);
     }

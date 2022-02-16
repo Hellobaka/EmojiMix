@@ -18,7 +18,7 @@ namespace me.cqp.luohuaming.EmojiMix.Code
             };
             try
             {
-                foreach (var item in MainSave.Instances.Where(item => item.Judge(e.Message.Text)))
+                foreach (var item in MainSave.Instances.Where(item => item.Judge(e.Message.Text, e.FromQQ)))
                 {
                     return item.Progress(e);
                 }
