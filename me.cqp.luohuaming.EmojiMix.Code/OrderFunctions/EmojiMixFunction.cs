@@ -18,13 +18,16 @@ namespace me.cqp.luohuaming.EmojiMix.Code.OrderFunctions
         public bool Judge(string destStr, long fromGroup)
         {
             var b = destStr.Replace("#", "").Replace("＃", "").Replace(" ", "").Split('+');
-            if(destStr.Contains("[CQ:face"))
+            if (MainSave.EmojiData != null && b.Length == 2 && destStr.StartsWith("#"))
             {
-                MainSave.CQApi.SendGroupMessage(fromGroup, "仅支持 Emoji 表情，QQ表情将无法使用");
-            }
-            return MainSave.EmojiData != null && b.Length == 2 &&
-                ((b[0].IsEmojiCQCode() || b[0].Length == 2) && (b[1].IsEmojiCQCode() || b[1].Length == 2)) &&
-                (destStr.StartsWith("#") || destStr.StartsWith("＃"));
+                if (destStr.Contains("[CQ:face"))
+                {
+                    MainSave.CQApi.SendGroupMessage(fromGroup, "仅支持 Emoji 表情，QQ表情将无法使用");
+                }
+            } 
+            else
+                return false;
+            return (b[0].IsEmojiCQCode() || b[0].Length == 2) && (b[1].IsEmojiCQCode() || b[1].Length == 2);
         }
 
         public FunctionResult Progress(CQGroupMessageEventArgs e)//群聊处理
